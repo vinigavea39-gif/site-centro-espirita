@@ -1,0 +1,66 @@
+﻿/* Reset básico */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:whitesmoke ;
+	color: #333;
+	line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+	background-color: aqua;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Menu */
+nav {
+	background-color: lightslategrey;
+}
+
+	nav ul {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+	}
+
+		nav ul li {
+			margin: 0 15px;
+		}
+
+			nav ul li a {
+				color: white;
+				text-decoration: none;
+				font-weight: bold;
+			}
+
+/* Conteúdo */
+main {
+	max-width: 900px;
+	margin: 20px auto;
+	padding: 0 15px;
+}
+
+section {
+	margin-bottom: 30px;
+}
+
+/* Rodapé */
+footer {
+	background-color: aliceblue;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+🧠 O que você ganhou com isso
+✔ HTML sem estilo
+✔ CSS 100% s
