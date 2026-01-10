@@ -8,59 +8,161 @@
 /* Estilo geral */
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color:whitesmoke ;
+	background-color: #f4f8fb;
 	color: #333;
 	line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-	background-color: aqua;
+	background-color: #2b5d8a;
 	color: white;
-	padding: 20px;
+	padding: 25px;
 	text-align: center;
 }
 
 /* Menu */
 nav {
-	background-color: lightslategrey;
+	background-color: #3f78a8;
 }
 
 	nav ul {
 		list-style: none;
 		display: flex;
 		justify-content: center;
+		padding: 12px 0;
 	}
 
 		nav ul li {
-			margin: 0 15px;
+			margin: 0 18px;
 		}
 
 			nav ul li a {
 				color: white;
 				text-decoration: none;
 				font-weight: bold;
+				padding: 8px 14px;
+				border-radius: 6px;
+				transition: background-color 0.3s, color 0.3s;
 			}
+
+				/* Hover do menu */
+				nav ul li a:hover {
+					background-color: #e6f0f8;
+					color: #2b5d8a;
+				}
 
 /* Conteúdo */
 main {
 	max-width: 900px;
-	margin: 20px auto;
+	margin: 35px auto;
 	padding: 0 15px;
 }
 
 section {
-	margin-bottom: 30px;
+	margin-bottom: 35px;
 }
+
+	section h1,
+	section h2 {
+		color: #2b5d8a;
+		margin-bottom: 12px;
+	}
+
+	section p {
+		text-align: justify;
+	}
 
 /* Rodapé */
 footer {
-	background-color: aliceblue;
+	background-color: #2b5d8a;
 	color: white;
 	text-align: center;
-	padding: 10px;
+	padding: 18px;
+	margin-top: 40px;
+}
+/* Ajuste do menu para ícones */
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 25px;
 }
 
-🧠 O que você ganhou com isso
-✔ HTML sem estilo
-✔ CSS 100% s
+/* Links do menu */
+.menu-links {
+	display: flex;
+	list-style: none;
+}
+
+/* Área dos ícones */
+.menu-social {
+	display: flex;
+	gap: 15px;
+}
+
+	.menu-social a {
+		color: white;
+		font-size: 18px;
+		transition: color 0.3s, transform 0.3s;
+	}
+
+		/* Hover dos ícones */
+		.menu-social a:hover {
+			color: #e6f0f8;
+			transform: scale(1.2);
+		}
+
+/* ===============================
+   RESPONSIVIDADE - CELULAR
+   =============================== */
+@media (max-width: 768px) {
+
+	/* Header */
+	header {
+		padding: 20px 10px;
+	}
+
+	/* Menu geral */
+	nav {
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+	}
+
+	/* Links do menu */
+	.menu-links {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+		.menu-links li {
+			margin: 10px 0;
+		}
+
+			.menu-links li a {
+				display: block;
+				width: 100%;
+				text-align: center;
+				font-size: 18px;
+			}
+
+	/* Ícones sociais */
+	.menu-social {
+		margin-top: 15px;
+	}
+
+		.menu-social a {
+			font-size: 22px;
+		}
+
+	/* Conteúdo */
+	main {
+		margin: 20px auto;
+	}
+
+	section p {
+		text-align: left;
+	}
+}
