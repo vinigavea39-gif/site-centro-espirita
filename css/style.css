@@ -113,6 +113,8 @@ nav {
 			transform: scale(1.2);
 		}
 
+
+
 /* ===============================
    RESPONSIVIDADE - CELULAR
    =============================== */
@@ -197,8 +199,8 @@ nav {
 		gap: 15px;
 	}
 
-		.galeria-grid imagem {
-			width: 100%;
+		.galeria-grid img {
+			width: 50%;
 			height: 200px;
 			object-fit: cover;
 			border-radius: 8px;
@@ -208,5 +210,118 @@ nav {
 			.galeria-grid img:hover {
 				transform: scale(1.05);
 			}
+	.galeria-item {
+		text-align: center;
+	}
+
+		.galeria-item img {
+			width: 100%;
+			height: 220px;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+
+	.descricao {
+		margin-top: 10px;
+		font-size: 15px;
+		color: #444;
+		line-height: 1.4;
+	}
+
+	
+
+
+	.texto-lateral {
+		flex: 1;
+	}
+
+		.texto-lateral h3 {
+			margin-top: 0;
+			font-size: 20px;
+		}
+
+		.texto-lateral p {
+			font-size: 16px;
+			line-height: 1.5;
+			color: #333;
+		}
+	/* Bloco lado a lado */
+	.galeria-lado {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		text-align: left;
+	}
+
+		/* Imagem lateral */
+		.galeria-lado img {
+			width: 280px; /* IMPORTANTE: não usar 100% */
+			height: 220px;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+
+	/* Texto ao lado */
+	.texto-lateral {
+		flex: 1;
+	}
+
+		.texto-lateral h3 {
+			margin-top: 0;
+			font-size: 20px;
+		}
+
+	/* Galeria padrão */
+	.galeria-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 20px;
+	}
+
+	.galeria-item {
+		text-align: center;
+	}
+
+		.galeria-item img {
+			width: 100%;
+			height: 220px;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+
+	/* Texto abaixo */
+	.descricao {
+		font-size: 15px;
+		color: #444;
+		line-height: 1.4;
+	}
+
+	/* ===== IMAGEM COM TEXTO AO LADO ===== */
+	.galeria-lado {
+		grid-column: 1 / -1; /* ocupa a linha toda */
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		text-align: left;
+	}
+
+		.galeria-lado img {
+			width: 300px;
+			height: 220px;
+		}
+
+	/* Texto lateral */
+	.texto-lateral {
+		flex: 1;
+	}
+
+		.texto-lateral h3 {
+			margin-top: 0;
+			color: #2b5d8a;
+		}
+
+	
+
 
 }
+
