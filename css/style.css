@@ -35,7 +35,7 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 12px 25px;
+	padding: 7px 10px;
 }
 
 .menu-links {
@@ -172,8 +172,6 @@ section {
 }
 
 
-
-
 /* ===============================
    RODAPÉ
    =============================== */
@@ -184,6 +182,49 @@ footer {
 	padding: 18px;
 	margin-top: 40px;
 }
+
+/* ===============================
+   TEMA ESCURO
+   =============================== */
+body.tema-escuro {
+	background-color: #121212;
+	color: #e0e0e0;
+}
+
+	/* Textos */
+	body.tema-escuro h1,
+	body.tema-escuro h2,
+	body.tema-escuro p {
+		color: #e0e0e0;
+	}
+
+	/* Header e Footer */
+	body.tema-escuro header,
+	body.tema-escuro footer {
+		background-color: #1f1f1f;
+	}
+
+	/* Menu */
+	body.tema-escuro nav {
+		background-color: #1a1a1a;
+	}
+
+		body.tema-escuro nav ul li a {
+			color: #e0e0e0;
+		}
+
+			body.tema-escuro nav ul li a:hover {
+				background-color: #333;
+				color: #fff;
+			}
+
+	/* Galeria */
+	body.tema-escuro .galeria {
+		background-color: transparent;
+	}
+
+/* Botão WhatsApp continua verde */
+
 
 /* ===============================
    RESPONSIVO (CELULAR)
