@@ -1,11 +1,15 @@
-﻿/* Reset básico */
+﻿/* ===============================
+   RESET BÁSICO
+   =============================== */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-/* Estilo geral */
+/* ===============================
+   ESTILO GERAL
+   =============================== */
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: #f4f8fb;
@@ -13,7 +17,9 @@ body {
 	line-height: 1.6;
 }
 
-/* Cabeçalho */
+/* ===============================
+   CABEÇALHO
+   =============================== */
 header {
 	background-color: #2b5d8a;
 	color: white;
@@ -21,81 +27,36 @@ header {
 	text-align: center;
 }
 
-/* Menu */
+/* ===============================
+   MENU
+   =============================== */
 nav {
 	background-color: #3f78a8;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 25px;
 }
 
-	nav ul {
-		list-style: none;
-		display: flex;
-		justify-content: center;
-		padding: 12px 0;
+.menu-links {
+	list-style: none;
+	display: flex;
+	gap: 18px;
+}
+
+	.menu-links a {
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
+		padding: 8px 14px;
+		border-radius: 6px;
 	}
 
-		nav ul li {
-			margin: 0 18px;
+		.menu-links a:hover {
+			background-color: #e6f0f8;
+			color: #2b5d8a;
 		}
 
-			nav ul li a {
-				color: white;
-				text-decoration: none;
-				font-weight: bold;
-				padding: 8px 14px;
-				border-radius: 6px;
-				transition: background-color 0.3s, color 0.3s;
-			}
-
-				/* Hover do menu */
-				nav ul li a:hover {
-					background-color: #e6f0f8;
-					color: #2b5d8a;
-				}
-
-/* Conteúdo */
-main {
-	max-width: 900px;
-	margin: 35px auto;
-	padding: 0 15px;
-}
-
-section {
-	margin-bottom: 35px;
-}
-
-	section h1,
-	section h2 {
-		color: #2b5d8a;
-		margin-bottom: 12px;
-	}
-
-	section p {
-		text-align: justify;
-	}
-
-/* Rodapé */
-footer {
-	background-color: #2b5d8a;
-	color: white;
-	text-align: center;
-	padding: 18px;
-	margin-top: 40px;
-}
-/* Ajuste do menu para ícones */
-nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 25px;
-}
-
-/* Links do menu */
-.menu-links {
-	display: flex;
-	list-style: none;
-}
-
-/* Área dos ícones */
 .menu-social {
 	display: flex;
 	gap: 15px;
@@ -104,62 +65,141 @@ nav {
 	.menu-social a {
 		color: white;
 		font-size: 18px;
-		transition: color 0.3s, transform 0.3s;
 	}
 
-		/* Hover dos ícones */
-		.menu-social a:hover {
-			color: #e6f0f8;
-			transform: scale(1.2);
-		}
+/* ===============================
+   CONTEÚDO
+   =============================== */
+main {
+	max-width: 900px;
+	margin: 35px auto;
+	padding: 0 15px;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+	section h2 {
+		color: #2b5d8a;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	section p {
+		text-align: justify;
+	}
+
+/* ===============================
+   GALERIA SIMPLES (PARQUE DOS ORIXÁS)
+   =============================== */
+.galeria {
+	padding: 30px 0;
+}
+
+.galeria-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+
+.galeria-item img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.descricao {
+	margin-top: 10px;
+	font-size: 15px;
+	color: #444;
+}
+
+/* ===============================
+   GALERIA COM TEXTO AO LADO
+   (PRAIA DAS PEDRINHAS)
+   =============================== */
+.galeria-lado {
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+	.galeria-lado img {
+		width: 280px;
+		height: 400px;
+		object-fit: cover;
+		border-radius: 8px;
+	}
+
+.texto-lateral {
+	flex: 1;
+}
+
+/* ===============================
+   BOTÃO WHATSAPP
+   =============================== */
+.btn-whatsapp {
+	display: inline-block;
+	padding: 12px 20px;
+	background-color: #25D366;
+	color: white;
+	text-decoration: none;
+	border-radius: 6px;
+	font-weight: bold;
+}
+
+	.btn-whatsapp:hover {
+		background-color: #1ebe5d;
+	}
+
+/* ===============================
+   Eventos
+   =============================== */
+
+.galeria-eventos {
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+.galeria-eventos img {
+	width: 400px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
 
 
 
 /* ===============================
-   RESPONSIVIDADE - CELULAR
+   RODAPÉ
+   =============================== */
+footer {
+	background-color: #2b5d8a;
+	color: white;
+	text-align: center;
+	padding: 18px;
+	margin-top: 40px;
+}
+
+/* ===============================
+   RESPONSIVO (CELULAR)
    =============================== */
 @media (max-width: 768px) {
 
-	/* Header */
-	header {
-		padding: 20px 10px;
-	}
-
-	/* Menu geral */
 	nav {
 		flex-direction: column;
-		align-items: center;
-		padding: 10px;
+		gap: 10px;
 	}
 
-	/* Links do menu */
 	.menu-links {
 		flex-direction: column;
 		align-items: center;
-		width: 100%;
 	}
 
-		.menu-links li {
-			margin: 10px 0;
-		}
-
-			.menu-links li a {
-				display: block;
-				width: 100%;
-				text-align: center;
-				font-size: 18px;
-			}
-
-	/* Ícones sociais */
-	.menu-social {
-		margin-top: 15px;
-	}
-
-		.menu-social a {
-			font-size: 22px;
-		}
-
-	/* Conteúdo */
 	main {
 		margin: 20px auto;
 	}
@@ -167,161 +207,16 @@ nav {
 	section p {
 		text-align: left;
 	}
-	.btn-whatsapp {
-		display: inline-block;
-		padding: 12px 20px;
-		background-color: #25D366;
-		color: white;
-		text-decoration: none;
-		border-radius: 6px;
-		font-weight: bold;
-	}
 
-		.btn-whatsapp:hover {
-			background-color: #1ebe5d;
-		}
-
-		/*--- Imagem---------------    */
-
-	.galeria {
-		padding: 40px 20px;
-		text-align: center;
-	}
-
-		.galeria h2 {
-			margin-bottom: 25px;
-			font-size: 28px;
-		}
-
-	.galeria-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-		gap: 15px;
-	}
-
-		.galeria-grid img {
-			width: 50%;
-			height: 200px;
-			object-fit: cover;
-			border-radius: 8px;
-			transition: transform 0.3s ease;
-		}
-
-			.galeria-grid img:hover {
-				transform: scale(1.05);
-			}
-	.galeria-item {
-		text-align: center;
-	}
-
-		.galeria-item img {
-			width: 100%;
-			height: 220px;
-			object-fit: cover;
-			border-radius: 8px;
-		}
-
-	.descricao {
-		margin-top: 10px;
-		font-size: 15px;
-		color: #444;
-		line-height: 1.4;
-	}
-
-	
-
-
-	.texto-lateral {
-		flex: 1;
-	}
-
-		.texto-lateral h3 {
-			margin-top: 0;
-			font-size: 20px;
-		}
-
-		.texto-lateral p {
-			font-size: 16px;
-			line-height: 1.5;
-			color: #333;
-		}
-	/* Bloco lado a lado */
 	.galeria-lado {
-		display: flex;
+		flex-direction: column;
 		align-items: center;
-		gap: 20px;
-		text-align: left;
-	}
-
-		/* Imagem lateral */
-		.galeria-lado img {
-			width: 280px; /* IMPORTANTE: não usar 100% */
-			height: 220px;
-			object-fit: cover;
-			border-radius: 8px;
-		}
-
-	/* Texto ao lado */
-	.texto-lateral {
-		flex: 1;
-	}
-
-		.texto-lateral h3 {
-			margin-top: 0;
-			font-size: 20px;
-		}
-
-	/* Galeria padrão */
-	.galeria-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 20px;
-	}
-
-	.galeria-item {
 		text-align: center;
-	}
-
-		.galeria-item img {
-			width: 100%;
-			height: 220px;
-			object-fit: cover;
-			border-radius: 8px;
-		}
-
-	/* Texto abaixo */
-	.descricao {
-		font-size: 15px;
-		color: #444;
-		line-height: 1.4;
-	}
-
-	/* ===== IMAGEM COM TEXTO AO LADO ===== */
-	.galeria-lado {
-		grid-column: 1 / -1; /* ocupa a linha toda */
-		display: flex;
-		gap: 20px;
-		align-items: center;
-		text-align: left;
 	}
 
 		.galeria-lado img {
-			width: 300px;
-			height: 220px;
+			width: 100%;
+			max-width: 350px;
+			height: auto;
 		}
-
-	/* Texto lateral */
-	.texto-lateral {
-		flex: 1;
-	}
-
-		.texto-lateral h3 {
-			margin-top: 0;
-			color: #2b5d8a;
-		}
-
-	
-
-
 }
-
