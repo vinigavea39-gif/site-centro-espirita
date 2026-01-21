@@ -12,7 +12,7 @@
    =============================== */
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #f4f8fb;
+	background-color: lightskyblue;
 	color: #333;
 	line-height: 1.6;
 }
@@ -28,7 +28,7 @@ header {
 }
 
 /* ===============================
-   MENU
+   MENU FIXO
    =============================== */
 nav {
 	background-color: #3f78a8;
@@ -36,8 +36,14 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	padding: 7px 10px;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
 }
 
+/* ===============================
+   LINKS DO MENU
+   =============================== */
 .menu-links {
 	list-style: none;
 	display: flex;
@@ -57,6 +63,9 @@ nav {
 			color: #2b5d8a;
 		}
 
+/* ===============================
+   ÍCONES SOCIAIS
+   =============================== */
 .menu-social {
 	display: flex;
 	gap: 15px;
@@ -65,8 +74,16 @@ nav {
 	.menu-social a {
 		color: white;
 		font-size: 18px;
+		text-decoration: none;
 	}
 
+		.menu-social a:active {
+			color: white;
+		}
+
+		.menu-social a:visited {
+			color: white; /* mantém igual */
+		}
 /* ===============================
    CONTEÚDO
    =============================== */
@@ -223,7 +240,28 @@ body.tema-escuro {
 		background-color: transparent;
 	}
 
-/* Botão WhatsApp continua verde */
+/* ===============================
+    Fotos galeria inicio
+   =============================== */
+.galeria-inicio {
+	display: flex; 
+	align-items: inherit; 
+	justify-content: space-between;
+	gap: 30px; 
+	margin-top: 40px;
+}
+
+	.galeria-inicio img {
+		width: 300px; 
+		max-width: 100%;
+		border-radius: 10px;
+	}
+
+.galeria-inicio-txt-lateral {
+	flex: 1; 
+	
+
+
 
 
 /* ===============================
@@ -260,4 +298,9 @@ body.tema-escuro {
 			max-width: 350px;
 			height: auto;
 		}
+
+	
+
+
+
 }
