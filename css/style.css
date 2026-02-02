@@ -153,6 +153,30 @@ section {
 .texto-lateral {
 	flex: 1;
 }
+/* ===============================
+   Galeria Sobre
+  
+   =============================== */
+
+
+.galeria-sobre {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 20px; /* distância igual entre todas */
+}
+
+	.galeria-sobre img {
+		width: 100%;
+		height: 250px; /* todas iguais */
+		object-fit: cover; /* corta sem distorcer */
+		border-radius: 8px;
+		display: block; /* remove espaços estranhos */
+	}
+		.galeria-sobre img:hover {
+			transform: scale(1.03);
+			transition: 0.3s ease;
+		}
+
 
 /* ===============================
    BOTÃO WHATSAPP
@@ -252,10 +276,15 @@ body.tema-escuro {
 }
 
 	.galeria-inicio img {
-		width: 300px; 
+		width: 300px;
 		max-width: 100%;
 		border-radius: 10px;
+		transition: transform 0.3s ease;
 	}
+
+.galeria-inicio img:hover {
+	transform: scale(1.05);
+}
 
 .galeria-inicio-txt-lateral {
 	flex: 1;
@@ -299,7 +328,12 @@ body.tema-escuro {
 		}
 
 	
+	.galeria-sobre {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 12px;
+	}
 
-
-
-}
+		.galeria-sobre img {
+			height: 180px;
+		}
+}}
