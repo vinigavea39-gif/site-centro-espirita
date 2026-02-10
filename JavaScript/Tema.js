@@ -24,5 +24,9 @@ if (btnTema) {
 			icone.classList.remove("fa-sun");
 			icone.classList.add("fa-moon");
 		}
+
+
+
+
 	});
 }

@@ -123,12 +123,25 @@ body.pagina-transparente section {
 	.galeria {
 	padding: 30px 0;
 }
-
-.galeria-grid {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 20px;
+.foto-flutuante img {
+	width: 300px;
+	animation: flutuar 4s ease-in-out infinite;
 }
+
+@keyframes flutuar {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-15px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
 
 .galeria-item img {
 	width: 100%;
@@ -185,7 +198,65 @@ body.pagina-transparente section {
 		.galeria-sobre img:hover {
 			transform: scale(1.03);
 			transition: 0.3s ease;
+
 		}
+
+
+/* ===============================
+   PARTÍCULAS FLUTUANTES
+   =============================== */
+
+.particulas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1;
+	overflow: hidden;
+}
+
+	/* bolinhas individuais */
+	.particulas span {
+		position: absolute;
+		width: 4px;
+		height: 4px;
+		background: rgba(255, 255, 255, 0.8);
+		border-radius: 50%;
+		box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+		animation: subirDescer linear infinite;
+	}
+
+/* animação SÓ DAS BOLINHAS */
+@keyframes subirDescer {
+	0% {
+		transform: translateY(0);
+		opacity: 0.3;
+	}
+
+	50% {
+		transform: translateY(-25px);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 0.3;
+	}
+}
+
+/* conteúdo acima */
+header, nav, main, footer {
+	position: relative;
+	z-index: 2;
+}
+
+/* garante que o site fique acima */
+header, nav, main, footer {
+	position: relative;
+	z-index: 2;
+}
 
 
 /* ===============================
