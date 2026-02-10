@@ -212,6 +212,35 @@ section {
 	border-radius: 8px;
 }
 
+.galeria-eventos img:hover {
+	transform: scale(1.03);
+	transition: 0.3s ease;
+}
+
+ /*=======================================
+
+	Eventos2
+================================================
+*/
+
+.galeria-eventos2 {
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+.galeria-eventos2 img {
+	width: 400px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.galeria-eventos2 img:hover {
+	transform: scale(1.03);
+	transition: 0.3s ease;
+}
+
 
 /* ===============================
    RODAPÉ
