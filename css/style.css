@@ -108,9 +108,19 @@ section {
 	}
 
 /* ===============================
+   Estilo transparente HTML iNICIO
+   =============================== */
+body.pagina-transparente section {
+	background: rgba(215, 228, 242, 0.88);
+	backdrop-filter: blur(6px);
+	border-radius: 8px;
+	padding: 25px;
+}
+
+	/* ===============================
    GALERIA SIMPLES (PARQUE DOS ORIXÁS)
    =============================== */
-.galeria {
+	.galeria {
 	padding: 30px 0;
 }
 
