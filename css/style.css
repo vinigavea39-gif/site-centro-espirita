@@ -12,7 +12,7 @@
    =============================== */
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: lightskyblue;
+	background-color: #f4f7fb;
 	color: #333;
 	line-height: 1.6;
 }
@@ -21,25 +21,70 @@ body {
    CABEÇALHO
    =============================== */
 header {
-	background-color: #2b5d8a;
+	background: linear-gradient(135deg, #1f4e79, #2c6aa0);
 	color: white;
-	padding: 25px;
+	padding: 10px 20px;
 	text-align: center;
 }
+	header h1 {
+		font-size: 28px;
+		margin-bottom: 5px;
+		letter-spacing: 1px;
+	}
 
+	header p {
+		font-size: 16px;
+		opacity: 0.9;
+	}
 /* ===============================
    MENU FIXO
    =============================== */
-nav {
-	background-color: #3f78a8;
+.titulo-site {
+	width: 100%;
+	text-align: center;
+}
+
+	.titulo-site h1 {
+		font-family: 'Merriweather', serif;
+		font-size: 26px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-align: center;
+	}
+
+
+.topo {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	padding: 7px 10px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/* título */
+.titulo-site h1 {
+	font-size: 24px;
+	margin: 0;
+}
+
+
+
+nav {
+	background-color: #2c6aa0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px 20px; /* antes provavelmente estava 10px ou mais */
 	position: sticky;
 	top: 0;
 	z-index: 1000;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
+	nav a.ativo {
+		background-color: #c59d5f;
+		color: white;
+		border-radius: 5px;
+	}
 
 /* ===============================
    LINKS DO MENU
@@ -47,21 +92,51 @@ nav {
 .menu-links {
 	list-style: none;
 	display: flex;
-	gap: 18px;
+	gap: 25px;
+	padding: 0;
+	margin: 0 auto;
+	margin-right: 5px; /* empurra para direita */
 }
 
+	.menu-links li {
+		display: inline-block;
+	}
+
 	.menu-links a {
-		color: white;
-		text-decoration: none;
-		font-weight: bold;
-		padding: 8px 14px;
-		border-radius: 6px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
 	}
 
 		.menu-links a:hover {
-			background-color: #e6f0f8;
-			color: #2b5d8a;
+			background-color: #ff7a18;
+			color: white;
 		}
+/*
+	=====================================
+	MENU BOTÃO TEMA
+	====================================
+*/
+#btn-tema {
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	z-index: 9999;
+	background: #333;
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+	#btn-tema i {
+		color: white;
+	}
+
 
 /* ===============================
    ÍCONES SOCIAIS
@@ -69,21 +144,27 @@ nav {
 .menu-social {
 	display: flex;
 	gap: 15px;
+	margin-left: auto;
 }
 
-	.menu-social a {
-		color: white;
-		font-size: 18px;
-		text-decoration: none;
-	}
+/* Facebook */
+.facebook {
+	color: #1877F2;
+}
 
-		.menu-social a:active {
-			color: white;
-		}
+/* Instagram */
+.instagram {
+	color: #E4405F;
+}
 
-		.menu-social a:visited {
-			color: white; /* mantém igual */
-		}
+/* WhatsApp */
+.whatsapp {
+	color: #25D366;
+}
+
+.menu-social a:hover {
+	transform: scale(1.2);
+}
 /* ===============================
    CONTEÚDO
    =============================== */
@@ -95,16 +176,24 @@ main {
 
 section {
 	margin-bottom: 40px;
+	background: white;
+	padding: 25px;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 	section h2 {
-		color: #2b5d8a;
+		color: #1f4e79;
+		font-size: 28px;
 		margin-bottom: 15px;
 		text-align: center;
 	}
 
-	section p {
-		text-align: justify;
+	section h3 {
+		color: #1f4e79;
+		font-size: 20px;
+		margin-bottom: 15px;
+		text-align: center;
 	}
 
 /* ===============================
@@ -222,11 +311,24 @@ body.pagina-transparente section {
 		position: absolute;
 		width: 4px;
 		height: 4px;
-		background: rgba(255, 255, 255, 0.8);
+		background: rgba(0, 0, 0, 0.3);
+		box-shadow: 0 0 6px rgba(0,0,0,0.4);
 		border-radius: 50%;
-		box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-		animation: subirDescer linear infinite;
+		opacity: 0.7;
+		animation: subir 10s linear infinite;
 	}
+
+
+
+	.particulas span:nth-child(1){ left:10%; animation-duration:12s;}
+.particulas span:nth-child(2){ left:25%; animation-duration:18s;}
+.particulas span:nth-child(3){ left:40%; animation-duration:14s;}
+.particulas span:nth-child(4){ left:55%; animation-duration:16s;}
+.particulas span:nth-child(5){ left:70%; animation-duration:20s;}
+.particulas span:nth-child(6){ left:85%; animation-duration:15s;}
+.particulas span:nth-child(7){ left:35%; animation-duration:13s;}
+.particulas span:nth-child(8){ left:60%; animation-duration:17s;}
+
 
 /* animação SÓ DAS BOLINHAS */
 @keyframes subirDescer {
@@ -262,17 +364,21 @@ header, nav, main, footer {
 /* ===============================
    BOTÃO WHATSAPP
    =============================== */
-.btn-whatsapp {
-	display: inline-block;
-	padding: 12px 20px;
+.whatsapp-fixo {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
 	background-color: #25D366;
-	color: white;
+	border-radius: 50%;
 	text-decoration: none;
-	border-radius: 6px;
-	font-weight: bold;
+	margin-left: 8px;
+	transition: 0.3s;
 }
 
-	.btn-whatsapp:hover {
+	.whatsapp-fixo:hover {
+		transform: scale(1.1);
 		background-color: #1ebe5d;
 	}
 
@@ -336,43 +442,67 @@ footer {
 
 /* ===============================
    TEMA ESCURO
-   =============================== */
+=======================================
+	*/
+
 body.tema-escuro {
 	background-color: #121212;
-	color: #e0e0e0;
+	color: #e4e4e4;
 }
 
-	/* Textos */
-	body.tema-escuro h1,
-	body.tema-escuro h2,
-	body.tema-escuro p {
-		color: #e0e0e0;
+
+body.tema-escuro h1,
+body.tema-escuro h2,
+body.tema-escuro h3 {
+	color: #ffffff;
+}
+
+/* Textos */
+body.tema-escuro p {
+	color: #cfcfcf;
+}
+
+/* Header */
+body.tema-escuro header {
+	background-color: #1b1b1b;
+	border-bottom: 1px solid #333;
+}
+
+/* Menu */
+body.tema-escuro nav {
+	background-color: #181818;
+}
+
+	body.tema-escuro nav a {
+		color: #e4e4e4;
 	}
 
-	/* Header e Footer */
-	body.tema-escuro header,
-	body.tema-escuro footer {
-		background-color: #1f1f1f;
-	}
-
-	/* Menu */
-	body.tema-escuro nav {
-		background-color: #1a1a1a;
-	}
-
-		body.tema-escuro nav ul li a {
-			color: #e0e0e0;
+		body.tema-escuro nav a:hover {
+			background-color: #2a2a2a;
 		}
 
-			body.tema-escuro nav ul li a:hover {
-				background-color: #333;
-				color: #fff;
-			}
+/* Seções */
+body.tema-escuro section {
+	background-color: #121212;
+}
 
-	/* Galeria */
-	body.tema-escuro .galeria {
-		background-color: transparent;
-	}
+/* Cards ou blocos */
+body.tema-escuro .card,
+body.tema-escuro .container {
+	background-color: #1e1e1e;
+	border-radius: 8px;
+}
+
+/* Footer */
+body.tema-escuro footer {
+	background-color: #1b1b1b;
+	border-top: 1px solid #333;
+}
+
+/* Links */
+body.tema-escuro a {
+	color: #4da3ff;
+}
 
 /* ===============================
     Fotos galeria inicio
@@ -407,43 +537,43 @@ body.tema-escuro {
    =============================== */
 @media (max-width: 768px) {
 
+	header h1 {
+		font-size: 22px;
+	}
+
+	header p {
+		font-size: 14px;
+	}
+
 	nav {
-		flex-direction: column;
-		gap: 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.menu-toggle {
+		font-size: 28px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		display: block;
 	}
 
 	.menu-links {
+		display: none;
 		flex-direction: column;
-		align-items: center;
+		width: 100%;
+		background: #222;
+		padding: 10px 0;
 	}
 
-	main {
-		margin: 20px auto;
-	}
-
-	section p {
-		text-align: left;
-	}
-
-	.galeria-lado {
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
-
-		.galeria-lado img {
-			width: 100%;
-			max-width: 350px;
-			height: auto;
+		.menu-links a {
+			padding: 12px;
+			text-align: center;
+			border-bottom: 1px solid #444;
 		}
 
-	
-	.galeria-sobre {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 12px;
-	}
-
-		.galeria-sobre img {
-			height: 180px;
+		.menu-links.ativo {
+			display: flex;
 		}
-}}
+}

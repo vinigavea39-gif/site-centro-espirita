@@ -30,3 +30,9 @@ if (btnTema) {
 
 	});
 }
+const botao = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu-links");
+
+botao.addEventListener("click", () => {
+	menu.classList.toggle("ativo");
+});
