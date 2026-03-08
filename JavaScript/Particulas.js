@@ -4,7 +4,7 @@ for (let i = 0; i < 80; i++) {
 	const span = document.createElement('span');
 
 	let p = document.createElement("span");
-	p.classList.add("particula");
+	p.classList.add("particulas");
 
 	p.style.left = Math.random() * 100 + "vw";
 	p.style.animationDuration = (10 + Math.random() * 10) + "s";
